@@ -1,50 +1,83 @@
-# Welcome to your Expo app 👋
+# App de Evaluación - Desarrollo Mobile
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Proyecto de evaluación para el curso de Desarrollo de Aplicaciones Móviles.
 
-## Get started
+## 📱 Descripción
 
-1. Install dependencies
+Esta aplicación móvil desarrollada con React Native y Expo implementa un sistema de autenticación básico con navegación por pestañas (tabs).
 
+### Características principales:
+- **Pantalla de Login**: Validación de email y contraseña
+- **Navegación por Tabs**: Home y Perfil
+- **Autenticación**: Sistema de login/logout
+- **Validaciones**: Email y contraseña
+- **Contexto**: Email guardado en contexto global de la aplicación
+
+## 🚀 Inicio rápido
+
+### Prerrequisitos
+- Node.js instalado
+- Expo CLI
+
+### Instalación
+
+1. **Instalar dependencias**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+2. **Iniciar la aplicación**
    ```bash
-   npx expo start
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+3. **Ejecutar en dispositivo**
+   - Escanea el código QR con la app Expo Go
+   - O abre en el navegador [localhost:8081](http://localhost:8081)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🔐 Credenciales de prueba
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Email**: Cualquier email válido (ej: test@example.com)
+- **Contraseña**: `1234`
 
-## Get a fresh project
+## 📁 Estructura del proyecto
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+pizzeria/
+├── app/                                     # Pantallas y navegación
+│   ├── _layout.tsx                          # Layout principal con AuthProvider
+│   ├── login.tsx                            # Pantalla de login
+│   ├── index.tsx                            # Index para redirigir al login
+│   └── (tabs)/                              # Navegación por pestañas
+│       ├── _layout.tsx                      # Configuración de tabs
+│       ├── index.tsx                        # Tab Home - pantalla principal
+│       └── profile.tsx                      # Tab Perfil - muestra email del usuario
+├── components/                              # Componentes reutilizables
+│   └── ui/                                  # Componentes de interfaz
+│       ├── CustomButton.tsx                 # Botón personalizado
+│       └── CustomInput.tsx                  # Input personalizado
+├── hooks/                                   # Hooks personalizados
+│   └── useLogin.ts                          # Hook para lógica de login
+├── contexts/                                # Contextos de React
+│   └── AuthContext.tsx                      # Contexto de autenticación
+├── constants/                               # Constantes y validaciones
+│   └── validation.ts                        # Funciones de validación (email, password)
+└── utils/                                   # Utilidades
+    └── alert.ts                             # Función para mostrar alertas
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🛠️ Tecnologías utilizadas
 
-## Learn more
+- **React Native** - Framework para desarrollo mobile
+- **Expo** - Plataforma de desarrollo
+- **TypeScript** - Tipado estático
+- **Expo Router** - Navegación basada en archivos
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📚 Aprendizajes
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Este proyecto demuestra:
+- Manejo de estado con React Hooks
+- Navegación con Expo Router
+- Context API para estado global
+- Validaciones de formularios
+- Arquitectura de componentes
