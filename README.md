@@ -13,6 +13,10 @@ Esta aplicación móvil desarrollada con React Native y Expo implementa un siste
 - **Validaciones**: Email y contraseña
 - **Contexto**: Email guardado en contexto global de la aplicación
 
+## 📽️ Video demostrativo
+
+[![Ver video en Loom](https://cdn.loom.com/sessions/thumbnails/0a2fd926029b4d5d88869342dd98cb01-d4b37dd5b7335edb-full-play.gif)](https://www.loom.com/share/0a2fd926029b4d5d88869342dd98cb01)
+
 ## 🚀 Inicio rápido
 
 ### Prerrequisitos
